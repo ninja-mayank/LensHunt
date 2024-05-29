@@ -18,4 +18,4 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-Link to the deployed application :- [https://lens-hunt-nrk6zek6n-mayanks-projects-595ca9d7.vercel.app]
+Link to the deployed application :- [[https://lens-hunt-nrk6zek6n-mayanks-projects-595ca9d7.vercel.app](https://lens-hunt-fse26ph0t-mayanks-projects-595ca9d7.vercel.app/)]
