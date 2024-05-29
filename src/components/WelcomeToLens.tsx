@@ -15,7 +15,7 @@ export function WelcomeToLens() {
   if (!isConnected) {
     return (
       <>
-        <p className="mb-4 text-gray-500">Connect your wallet to get started.</p>
+        <p className="mb-4 text-gray-500 pl-14">Connect your wallet to get started.</p>
         <ConnectWalletButton />
       </>
     );
@@ -25,7 +25,7 @@ export function WelcomeToLens() {
   if (!session?.authenticated && address) {
     return (
       <>
-        <p className="mb-4 text-gray-500">Connected wallet: {truncateEthAddress(address)}</p>
+        <p className="mb-4 text-gray-500 pl-14">Connected wallet: {truncateEthAddress(address)}</p>
         <LoginForm owner={address} />
 
         <div className="mt-2">
@@ -39,7 +39,7 @@ export function WelcomeToLens() {
   if (session && session.type === SessionType.WithProfile) {
     return (
       <>
-        <p className="mb-4 text-gray-500">
+        <p className="mb-4 text-gray-500 pl-3">
           You are logged in as{" "}
           <span className="text-gray-800 font-semibold">
             {session.profile.handle?.fullHandle ?? session.profile.id}

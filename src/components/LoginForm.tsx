@@ -3,6 +3,7 @@ import { profileId, useLogin, useProfilesManaged } from "@lens-protocol/react-we
 import { ErrorMessage } from "./ErrorMessage";
 import { Loading } from "./Loading";
 import { Button } from "./Button";
+import CreateProfile from "./CreateProfile";
 
 export function LoginForm({ owner, onSuccess }: { owner: string; onSuccess?: () => void }) {
   const { execute: login, loading: isLoginPending } = useLogin();
@@ -38,15 +39,15 @@ export function LoginForm({ owner, onSuccess }: { owner: string; onSuccess?: () 
   }
 
   if (profiles.length === 0) {
-    return <p className="mb-4 text-base text-gray-500">No Lens Profiles found in this wallet.</p>;
+    return <CreateProfile />
   }
 
   return (
     <form onSubmit={onSubmit} className="flex">
       <fieldset className="flex place-items-center flex-col">
-        <legend className="text-base text-gray-500">Select a Lens Profile to login with.</legend>
+        <legend className="text-base text-gray-500 pl-16">Select a Lens Profile to login with.</legend>
 
-        <div className="my-4 space-y-2">
+        <div className="my-4 space-y-2 pl-16">
           {profiles.map((profile, idx) => (
             <label
               key={profile.id}
@@ -67,7 +68,7 @@ export function LoginForm({ owner, onSuccess }: { owner: string; onSuccess?: () 
           ))}
         </div>
 
-        <div>
+        <div className="pr-10">
           <Button disabled={isLoginPending} type="submit">
             {isLoginPending ? "Sign message in your wallet" : "Login to Lens"}
           </Button>

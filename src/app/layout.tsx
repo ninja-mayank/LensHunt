@@ -16,8 +16,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" className="w-full h-full bg-gray-400">
+      <body>
         <Web3Provider>{children}</Web3Provider>
       </body>
     </html>
